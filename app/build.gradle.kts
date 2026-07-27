@@ -26,7 +26,8 @@ android {
   signingConfigs {
     create("release") {
       val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
-      storeFile = file(keystorePath)
+      val kFile = file(keystorePath)
+      storeFile = if (kFile.exists()) kFile else rootProject.file(keystorePath)
       storePassword = System.getenv("STORE_PASSWORD") ?: "android"
       keyAlias = System.getenv("KEY_ALIAS") ?: "upload"
       keyPassword = System.getenv("KEY_PASSWORD") ?: "android"
