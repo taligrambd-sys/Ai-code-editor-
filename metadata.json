@@ -1,0 +1,6 @@
+{
+  "name": "DeepSeek AI Web Code Studio",
+  "description": "Native Android AI Web Code Studio powered by DeepSeek models for chatting, code generation, live editing, and instant web preview.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
